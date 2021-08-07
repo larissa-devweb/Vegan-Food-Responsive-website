@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Complete Responsive Food Website Design Tutorial</title>
+
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+
+  <!-- font awesome cdn link  -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+
+  <!-- custom css file link  -->
+  <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+
+  <!-- header section starts      -->
+
+  <header>
+
+    <a href="#" class="logo"><i class="fas fa-utensils"></i>Lara's</a>
+
+    <nav class="navbar">
+      <a class="active" href="#home">home</a>
+      <a href="#dishes">dishes</a>
+      <a href="#about">about</a>
+      <a href="#menu">menu</a>
+      <a href="#review">review</a>
+      <a href="#order">order</a>
+    </nav>
+
+    <div class="icons">
+      <i class="fas fa-bars" id="menu-bars"></i>
+      <i class="fas fa-search" id="search-icon"></i>
+      <a href="#" class="fas fa-heart"></a>
+      <a href="#" class="fas fa-shopping-cart"></a>
+    </div>
+
+  </header>
+
+  <!-- header section ends-->
+
+  <!-- search form  -->
+
+  <form action="" id="search-form">
+    <input type="search" placeholder="search here..." name="" id="search-box">
+    <label for="search-box" class="fas fa-search"></label>
+    <i class="fas fa-times" id="close"></i>
+  </form>
+
+  <!-- home section starts  -->
+
+  <section class="home" id="home">
+
+    <div class="swiper-container home-slider">
+
+      <div class="swiper-wrapper wrapper">
+
+        <div class="swiper-slide slide">
+          <div class="content">
+            <span>your special dinner</span>
+            <h3>Lara's</h3>
+            <a href="#" class="btn">order now</a>
+          </div>
+          <div class="image">
+            <img src="https://image.freepik.com/fotos-gratis/comida-vegana-de-acao-de-gracas_53876-83454.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="content">
+            <span>our special dish</span>
+            <h3>oyster stew</h3>
+            <a href="#" class="btn">order now</a>
+          </div>
+          <div class="image">
+            <img src="https://st4.depositphotos.com/8687452/20278/i/1600/depositphotos_202782798-stock-photo-stir-fried-king-oyster-mushroom.jpg" alt="">
+          </div>
+        </div>
+
+        <div class="swiper-slide slide">
+          <div class="content">
+            <span>our special dish</span>
+            <h3>vegan pizza</h3>
+
+            <a href="#" class="btn">order now</a>
+          </div>
+          <div class="image">
+            <img src="data:image/jpeg;base64,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" alt="">
+          </div>
+        </div>
+
+      </div>
+
+      <div class="swiper-pagination"></div>
+
+    </div>
+
+  </section>
+
+  <!-- home section ends -->
+
+  <!-- dishes section starts  -->
+
+  <section class="dishes" id="dishes">
+
+    <h3 class="sub-heading"> our dishes </h3>
+    <h1 class="heading"> popular dishes </h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT24i1KezT49VHA-7K5z8OS9b4fEwaHOTFWUnbFrK7KBsed2xH1zIdCN6ZtYGC1TZu-EUQ&usqp=CAU" alt="">
+        <h3>vegan cake</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span>$5.99</span>
+        <a href="#" class="btn">add to cart</a>
+      </div>
+
+      <div class="box">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+        <img src="https://www.hypeness.com.br/1/2020/05/703-1.jpg" alt="">
+        <h3>vegan burger</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span>$6.19</span>
+        <a href="#" class="btn">add to cart</a>
+      </div>
+
+      <div class="box">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+        <img src="https://rotaprincipal.com.br/wp-content/uploads/2019/04/burger-4022487_1920.jpg" alt="">
+        <h3>vegan lunch</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span>$15.79</span>
+        <a href="#" class="btn">add to cart</a>
+      </div>
+
+      <div class="box">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+        <img src="https://image.freepik.com/fotos-gratis/almoco-vegano-em-uma-tigela-de-coco-hamburgueres-verdes-com-salada-e-grao-de-bico_79830-421.jpg" alt="">
+        <h3>Salad</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span>$15.99</span>
+        <a href="#" class="btn">add to cart</a>
+      </div>
+
+      <div class="box">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+        <img src="https://curitidoce.com.br/novo/wp-content/uploads/2020/11/Receita-Cookie-Foto-Guto-Souza-1-750x375.jpg" alt="">
+        <h3>Vegan cookie</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span>$2.79</span>
+        <a href="#" class="btn">add to cart</a>
+      </div>
+
+      <div class="box">
+        <a href="#" class="fas fa-heart"></a>
+        <a href="#" class="fas fa-eye"></a>
+        <img src="https://image.freepik.com/fotos-gratis/jantar-vegano-massa-farfalle-com-molho-pesto-e-manjericao-folhas-sobre-fundo-de-pedra-cinza-de-chapa-branca_136595-9524.jpg" alt="">
+        <h3>Pasta</h3>
+        <div class="stars">
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star"></i>
+          <i class="fas fa-star-half-alt"></i>
+        </div>
+        <span>$12.99</span>
+        <a href="#" class="btn">add to cart</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- dishes section ends -->
+
+  <!-- about section starts  -->
+
+  <section class="about" id="about">
+
+    <h3 class="sub-heading"> about us </h3>
+    <h1 class="heading"> why choose us? </h1>
+
+    <div class="row">
+
+      <div class="image">
+        <img src="https://static.vecteezy.com/ti/vetor-gratis/p1/372690-logotipo-da-ilustracao-do-do-vegetariano-projeto-da-comida-letras-manuscritas-para-restaurante-menu-de-cafe-cru-elementos-para-rotulos-logotipos-emblemas-adesivos-ou-icones-colecao-caligrafica-e-tipografica-vetor.jpg" alt="">
+      </div>
+
+      <div class="content">
+        <h3>best food in the country</h3>
+
+        <p>Delve into regional and unique flavors. We show that vegan food is delicious</p>
+        <div class="icons-container">
+          <div class="icons">
+            <i class="fas fa-shipping-fast"></i>
+            <span>free delivery</span>
+          </div>
+          <div class="icons">
+            <i class="fas fa-dollar-sign"></i>
+            <span>easy payments</span>
+          </div>
+          <div class="icons">
+            <i class="fas fa-headset"></i>
+            <span>24/7 service</span>
+          </div>
+        </div>
+        <a href="#" class="btn">learn more</a>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- about section ends -->
+
+  <!-- menu section starts  -->
+
+  <section class="menu" id="menu">
+
+    <h3 class="sub-heading"> our menu </h3>
+    <h1 class="heading"> today's speciality </h1>
+
+    <div class="box-container">
+
+      <div class="box">
+        <div class="image">
+          <img src="images/menu-1.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>delicious food</h3>
+
+          <a href="#" class="btn">add to cart</a>
+          <span class="price">$12.99</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/menu-2.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>delicious food</h3>
+
+          <a href="#" class="btn">add to cart</a>
+          <span class="price">$12.99</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/menu-3.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>delicious food</h3>
+
+          <a href="#" class="btn">add to cart</a>
+          <span class="price">$12.99</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/menu-4.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>delicious food</h3>
+
+          <a href="#" class="btn">add to cart</a>
+          <span class="price">$12.99</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/menu-7.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>delicious food</h3>
+
+          <a href="#" class="btn">add to cart</a>
+          <span class="price">$12.99</span>
+        </div>
+      </div>
+
+      <div class="box">
+        <div class="image">
+          <img src="images/menu-8.jpg" alt="">
+          <a href="#" class="fas fa-heart"></a>
+        </div>
+        <div class="content">
+          <div class="stars">
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star"></i>
+            <i class="fas fa-star-half-alt"></i>
+          </div>
+          <h3>delicious food</h3>
+
+          <a href="#" class="btn">add to cart</a>
+          <span class="price">$12.99</span>
+        </div>
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- menu section ends -->
+
+  <!-- review section starts  -->
+
+  <section class="review" id="review">
+
+    <h3 class="sub-heading"> customer's review </h3>
+    <h1 class="heading"> what they say </h1>
+
+    <div class="swiper-container review-slider">
+
+      <div class="swiper-wrapper">
+
+        <div class="swiper-slide slide">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/pic-1.png" alt="">
+            <div class="user-info">
+              <h3>Jessica Vivian</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p> delicious food and cozy place</p>
+        </div>
+
+        <div class="swiper-slide slide">
+          <i class="fas fa-quote-right"></i>
+          <div class="user">
+            <img src="images/pic-3.png" alt="">
+            <div class="user-info">
+              <h3>Janaina Maria</h3>
+              <div class="stars">
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star"></i>
+                <i class="fas fa-star-half-alt"></i>
+              </div>
+            </div>
+          </div>
+          <p>
+            Top quality food, ambient sound and good service</p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- review section ends -->
+
+  <!-- order section starts  -->
+
+  <section class="order" id="order">
+
+    <h3 class="sub-heading"> order now </h3>
+    <h1 class="heading"> free and fast </h1>
+
+    <form action="">
+
+      <div class="inputBox">
+        <div class="input">
+          <span>your name</span>
+          <input type="text" placeholder="enter your name">
+        </div>
+        <div class="input">
+          <span>your number</span>
+          <input type="number" placeholder="enter your number">
+        </div>
+      </div>
+      <div class="inputBox">
+        <div class="input">
+          <span>your order</span>
+          <input type="text" placeholder="enter food name">
+        </div>
+        <div class="input">
+          <span>additional food</span>
+          <input type="test" placeholder="extra with food">
+        </div>
+      </div>
+      <div class="inputBox">
+        <div class="input">
+          <span>how musch</span>
+          <input type="number" placeholder="how many orders">
+        </div>
+        <div class="input">
+          <span>date and time</span>
+          <input type="datetime-local">
+        </div>
+      </div>
+      <div class="inputBox">
+        <div class="input">
+          <span>your address</span>
+          <textarea name="" placeholder="enter your address" id="" cols="30" rows="10"></textarea>
+        </div>
+        <div class="input">
+          <span>your message</span>
+          <textarea name="" placeholder="enter your message" id="" cols="30" rows="10"></textarea>
+        </div>
+      </div>
+
+      <input type="submit" value="order now" class="btn">
+
+    </form>
+
+  </section>
+
+  <!-- order section ends -->
+
+  <!-- footer section starts  -->
+
+  <section class="footer">
+
+    <div class="box-container">
+
+      <div class="box">
+        <h3>locations</h3>
+        <a href="#">Brazil</a>
+        <a href="#">japan</a>
+        <a href="#">Canada</a>
+        <a href="#">USA</a>
+        <a href="#">new Zealand</a>
+      </div>
+
+      <div class="box">
+        <h3>quick links</h3>
+
+        <a href="#">dishes</a>
+        <a href="#">about</a>
+        <a href="#">menu</a>
+        <a href="#">reivew</a>
+
+      </div>
+
+      <div class="box">
+        <h3>contact info</h3>
+        <a href="#">+55 xxxx-xxxx</a>
+        <a href="#">larissa-devweb@gmail.com</a>
+        <a href="#">Brazil, RS</a>
+      </div>
+
+      <div class="box">
+        <h3>follow us</h3>
+        <a href="#">facebook</a>
+        <a href="#">twitter</a>
+        <a href="#">instagram</a>
+        <a href="#">linkedin</a>
+      </div>
+
+    </div>
+
+    <div class="credit"> copyright @ 2021 by <span>x </span> </div>
+
+  </section>
+
+  <!-- footer section ends -->
+
+  <!-- loader part  -->
+  <div class="loader-container">
+    <img src="images/loader.gif" alt="">
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <!-- custom js file link  -->
+  <script src="js/script.js"></script>
+
+</body>
+
+</html>
